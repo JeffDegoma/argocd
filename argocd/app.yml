@@ -1,0 +1,21 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: example-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoUrl: https://github.com/JeffDegoma/argocd.git
+    targetRevision: HEAD
+    path: example-app
+    directory:
+      recurse: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: shaker
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
