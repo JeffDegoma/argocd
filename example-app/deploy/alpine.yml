@@ -12,7 +12,7 @@ spec:
         app: test
     spec:
       containers:
-      - name: alpine/argo
+      - name: alpine-argo
         imagePullPolicy: IfNotPresent
         image: alpine:latest
         resources:
