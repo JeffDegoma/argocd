@@ -1,29 +1,29 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: app
-spec:
-  selector:
-    matchLabels:
-      app: app
-  template:
-    metadata:
-      labels:
-        app: app
-    spec:
-      imagePullSecrets:
-      - name: regcred
-      containers:
-      - name: everclone-client
-        imagePullPolicy: IfNotPresent
-        image: 180430814937.dkr.ecr.us-east-1.amazonaws.com/docker_images:project_client
-        ports:
-          - containerPort: 80
-            protocol: TCP
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: app
+# spec:
+#   selector:
+#     matchLabels:
+#       app: app
+#   template:
+#     metadata:
+#       labels:
+#         app: app
+#     spec:
+#       imagePullSecrets:
+#       - name: reggie
+#       containers:
+#       - name: everclone-client
+#         imagePullPolicy: IfNotPresent
+#         image: 180430814937.dkr.ecr.us-east-1.amazonaws.com/docker_images:project_client
+#         ports:
+#           - containerPort: 80
+#             protocol: TCP
+#         resources:
+#           requests:
+#             memory: "64Mi"
+#             cpu: "250m"
+#           limits:
+#             memory: "128Mi"
+#             cpu: "500m"

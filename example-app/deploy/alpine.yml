@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app
+  name: test
 spec:
   selector:
     matchLabels:
-      app: app
+      app: test
   template:
     metadata:
       labels:
-        app: app
+        app: test
     spec:
       containers:
       - name: alpine/argo
