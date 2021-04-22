@@ -12,9 +12,11 @@ spec:
         app: test
     spec:
       containers:
-      - name: alpine-argo
+      - name: nginx-argo
         imagePullPolicy: IfNotPresent
-        image: alpine:latest
+        image: nginx:latest
+        ports:
+          - containerPort: 80
         resources:
           requests:
             memory: "64Mi"
