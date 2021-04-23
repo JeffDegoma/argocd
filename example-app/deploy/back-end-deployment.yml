@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend
+  name: server
 spec:
   selector:
     matchLabels:
-      app: backend
+      app: server
   template:
     metadata:
       labels:
-        app: backend
+        app: server
     spec:
       imagePullSecrets:
       - name: reggie
