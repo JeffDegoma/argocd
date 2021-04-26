@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: server
+  name: server #nginx proxy
 spec:
   selector:
     matchLabels:
@@ -11,8 +11,6 @@ spec:
       labels:
         app: server
     spec:
-      imagePullSecrets:
-      - name: reggie
       containers:
       - name: everclone-server
         imagePullPolicy: Always
